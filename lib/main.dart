@@ -1,3 +1,4 @@
+import 'package:farmerfame/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,8 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Works'),
+    return MaterialApp( 
+      home: SplashScreen(),
+      theme: ThemeData(colorScheme: ColorScheme.light()),
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
     );
   }
 }
