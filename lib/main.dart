@@ -191,7 +191,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                Text('${temp.toString()}°C',
+                Text('${(temp-273.15).toString()}°C',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
@@ -220,7 +220,7 @@ class _HomeState extends State<Home> {
                   ListTile(
                     leading: FaIcon(FontAwesomeIcons.thermometer),
                     title: Text('Temperature'),
-                    trailing: Text('${temp.toString()}°C'),
+                    trailing: Text('${(temp-273.15).toString()}°C'),
                   ),
                   ListTile(
                     leading: FaIcon(FontAwesomeIcons.sun),
