@@ -93,6 +93,18 @@ class _SplashScreenState extends State<SplashScreen>
              
             ],
           ),
+          SizedBox(
+            height: 50.0,
+            width:300,
+            child: Center(
+              child: RaisedButton(
+                elevation: 15.0,
+               child: Text('Get Started',style:TextStyle(color:Colors.white)),
+               color:Colors.orangeAccent[700],
+               onPressed: (){}
+              ),
+            ),
+          ),
            Row(
              mainAxisAlignment: MainAxisAlignment.spaceBetween,
              children: <Widget>[
