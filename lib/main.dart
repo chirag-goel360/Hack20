@@ -1,10 +1,5 @@
-import 'package:farmerfame/Screens/CarbonFoot.dart';
-import 'package:farmerfame/Weather.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'dart:math';
-import 'package:vector_math/vector_math.dart' show radians;
 
+import 'package:flutter/material.dart';
 import 'Screens/comparison.dart';
 
 void main() {
@@ -18,6 +13,11 @@ class MyApp extends StatelessWidget {
       home: Stats(),
       debugShowCheckedModeBanner: false,
     );
+    // Debug Direct
+    // return MaterialApp(
+    //   // home: CarbonResult(res: 100),
+    //   debugShowCheckedModeBanner: false,
+    // );
   }
 }
 
