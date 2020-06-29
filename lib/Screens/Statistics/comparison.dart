@@ -1,5 +1,5 @@
-import 'package:farmerfame/Screens/CarbonFoot.dart';
-import 'package:farmerfame/Weather.dart';
+import 'package:farmerfame/Screens/CarbonFootPrint/CarbonFoot.dart';
+import 'package:farmerfame/Screens/Weather/Weather.dart';
 import 'package:farmerfame/main.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -93,7 +93,10 @@ class _StatsState extends State<Stats> with SingleTickerProviderStateMixin {
                                 .topStart // or Alignment.topLeft
                             )),
                   ),
-                  // TODO: Replace below Image with Actual Graph or Stats
+                  Container(child: Image.asset('images/graph.jpeg')),
+                  SizedBox(
+                    height: 5,
+                  ),
                   Container(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Image.asset(
@@ -170,7 +173,6 @@ class _StatsState extends State<Stats> with SingleTickerProviderStateMixin {
                       ),
                     ],
                   ),
-
                   Container(
                       padding:
                           EdgeInsets.symmetric(vertical: 2, horizontal: 10),
@@ -184,7 +186,6 @@ class _StatsState extends State<Stats> with SingleTickerProviderStateMixin {
                     height: 4,
                     color: Colors.amber,
                   ),
-
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 10),
                     child: Text("See the Impact it Leaves",
@@ -296,13 +297,14 @@ class _StatsState extends State<Stats> with SingleTickerProviderStateMixin {
                     children: <Widget>[
                       IgnorePointer(
                         child: Container(
-                          color: Colors.transparent, // comment or change to transparent color
+                          color: Colors
+                              .transparent, // comment or change to transparent color
                           height: 150.0,
                           width: 150.0,
                         ),
                       ),
                       Transform.translate(
-                        offset: Offset.fromDirection(getRadiansFromDegree(270),
+                        offset: Offset.fromDirection(getRadiansFromDegree(250),
                             degOneTranslationAnimation.value * 100),
                         child: Transform(
                           transform: Matrix4.rotationZ(
@@ -318,11 +320,11 @@ class _StatsState extends State<Stats> with SingleTickerProviderStateMixin {
                               color: Colors.white,
                             ),
                             onClick: () {
-                             Navigator.push(context, MaterialPageRoute<void>(
-                  builder: (BuildContext context) {
-                    return Weather();
-                  },
-                ));
+                              Navigator.push(context, MaterialPageRoute<void>(
+                                builder: (BuildContext context) {
+                                  return Weather();
+                                },
+                              ));
                             },
                           ),
                         ),
@@ -340,20 +342,19 @@ class _StatsState extends State<Stats> with SingleTickerProviderStateMixin {
                             width: 50,
                             height: 50,
                             icon: Icon(
-                             FontAwesomeIcons.carCrash,
+                              FontAwesomeIcons.carCrash,
                               color: Colors.white,
                             ),
                             onClick: () {
                               Navigator.push(context, MaterialPageRoute<void>(
-                  builder: (BuildContext context) {
-                    return CarbonFootPrint();
-                  },
-                ));
+                                builder: (BuildContext context) {
+                                  return CarbonFootPrint();
+                                },
+                              ));
                             },
                           ),
                         ),
                       ),
-                     
                       Transform(
                         transform: Matrix4.rotationZ(
                             getRadiansFromDegree(rotationAnimation.value)),

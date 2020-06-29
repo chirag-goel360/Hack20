@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'Screens/comparison.dart';
+import 'Screens/Statistics/comparison.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,11 +13,7 @@ class MyApp extends StatelessWidget {
       home: Stats(),
       debugShowCheckedModeBanner: false,
     );
-    // Debug Direct
-    // return MaterialApp(
-    //   // home: CarbonResult(res: 100),
-    //   debugShowCheckedModeBanner: false,
-    // );
+    
   }
 }
 

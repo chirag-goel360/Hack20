@@ -1,5 +1,5 @@
 import 'package:farmerfame/Logic/CalculateCarbon.dart';
-import 'package:farmerfame/Screens/CarbonResult.dart';
+import 'package:farmerfame/Screens/CarbonFootPrint/CarbonResult.dart';
 import 'package:flutter/material.dart';
 // import 'package:charts_flutter/flutter.dart' as charts;
 
@@ -299,6 +299,7 @@ class _CarbonFootPrintState extends State<CarbonFootPrint> {
                     height: 50,
                     child: RaisedButton(
                       color: Colors.green[600],
+                      textColor: Colors.white,
                       child: Text("Calculate carbon footprint"),
                       elevation: 10.0,
                       onPressed: () {
