@@ -13,9 +13,6 @@ class _StatsState extends State<Stats> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //   title: Text("Statistics"),
-        // ),
         body: SingleChildScrollView(
       child: Container(
         padding: EdgeInsets.all(5),
@@ -23,14 +20,6 @@ class _StatsState extends State<Stats> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            // Container(
-            //   padding: EdgeInsets.all(10),
-            //   child: Text(
-            //     "Statistics",
-            //     style: TextStyle(fontSize: 54),
-            //     textAlign: TextAlign.start,
-            //   ),
-            // ),
             // Random Stats
             SizedBox(
               height: 35,
@@ -231,8 +220,6 @@ class _StatsState extends State<Stats> {
                     // text: "lorem ipsum sit amet...",
                     // image: "images/heatmap_co2.jpg",
                   ),
-
-                  ///add more as you wish
                 ],
               ),
             ),
