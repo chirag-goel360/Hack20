@@ -31,6 +31,8 @@ dependencies:
   font_awesome_flutter:
   geolocator:
   http:
+  
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
