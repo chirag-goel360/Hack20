@@ -1,4 +1,5 @@
 import 'package:farmerfame/Logic/CalculateCarbon.dart';
+import 'package:farmerfame/Screens/CarbonResult.dart';
 import 'package:flutter/material.dart';
 // import 'package:charts_flutter/flutter.dart' as charts;
 
@@ -301,9 +302,14 @@ class _CarbonFootPrintState extends State<CarbonFootPrint> {
                       child: Text("Calculate carbon footprint"),
                       elevation: 10.0,
                       onPressed: () {
-                        if(_formKey.currentState.validate()){
+                        if (_formKey.currentState.validate()) {
                           _formKey.currentState.save();
-                          calculate(people, energy, gas, cars, milage);
+                          var res=calculate(people, energy, gas, cars, milage);
+                          Navigator.push(context, MaterialPageRoute<void>(
+                            builder: (BuildContext context) {
+                              return CarbonResult(res:double.parse(res) ,);
+                            },
+                          ));
                         }
                       },
                     )),
