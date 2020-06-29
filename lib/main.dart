@@ -1,4 +1,5 @@
 import 'package:farmerfame/Screens/CarbonFoot.dart';
+// import 'package:farmerfame/Screens/CarbonResult.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:math';
@@ -8,16 +9,20 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget { 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: CarbonFootPrint(),
-    debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      home: CarbonFootPrint(),
+      debugShowCheckedModeBanner: false,
     );
+    // Debug Direct
+    // return MaterialApp(
+    //   // home: CarbonResult(res: 100),
+    //   debugShowCheckedModeBanner: false,
+    // );
   }
 }
-
-
 
 class RadialMenu extends StatefulWidget {
   createState() => _RadialMenuState();
@@ -128,4 +133,3 @@ class RadialAnimation extends StatelessWidget {
             elevation: 0));
   }
 }
-
