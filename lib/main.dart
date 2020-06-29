@@ -1,17 +1,23 @@
-import 'package:farmerfame/Weather.dart';
+import 'dart:convert';
+
+import 'package:farmerfame/Screens/CarbonFoot.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:geolocator/geolocator.dart';
 import 'dart:math';
 import 'package:vector_math/vector_math.dart' show radians;
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget { 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(body: SizedBox.expand(child: Weather())));
+    return MaterialApp(home: CarbonFootPrint(),
+    debugShowCheckedModeBanner: false,
+    );
   }
 }
 
