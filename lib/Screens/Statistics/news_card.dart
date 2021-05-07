@@ -7,7 +7,7 @@ class NewsCard extends StatelessWidget {
     this.title,
     this.text,
     this.image,
-    this.link = "",
+    this.link,
   }) : super(key: key);
 
   final String title;
@@ -27,21 +27,20 @@ class NewsCard extends StatelessWidget {
             Container(
               child: Text(
                 title,
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(
+                  fontSize: 14,
+                ),
               ),
             ),
             RaisedButton(
-              child: Text("READ"),
+              child: Text(
+                "READ",
+              ),
               color: Colors.amber,
               onPressed: () async {
                 await launch(link);
               },
             ),
-            // Image.asset(
-            //   image,
-            //   height: 100,
-            // ),
-            // Text(text, style: TextStyle(fontSize: 16))
           ],
         ),
       ),
