@@ -384,13 +384,15 @@ class _CarbonFootPrintState extends State<CarbonFootPrint> {
               ),
               SizedBox(
                 height: 50,
-                child: RaisedButton(
-                  color: Colors.green[600],
-                  textColor: Colors.white,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.green[600],
+                    onPrimary: Colors.white,
+                    elevation: 10.0,
+                  ),
                   child: Text(
                     "Calculate carbon footprint",
                   ),
-                  elevation: 10.0,
                   onPressed: () {
                     if (_formKey.currentState.validate()) {
                       _formKey.currentState.save();

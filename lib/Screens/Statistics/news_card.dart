@@ -32,11 +32,13 @@ class NewsCard extends StatelessWidget {
                 ),
               ),
             ),
-            RaisedButton(
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.amber,
+              ),
               child: Text(
                 "READ",
               ),
-              color: Colors.amber,
               onPressed: () async {
                 await launch(link);
               },
